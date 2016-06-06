@@ -87,7 +87,3 @@ colormap(icing_map)
 image(M)
 truesize
 
-
-
-
-

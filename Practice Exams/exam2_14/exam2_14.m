@@ -42,11 +42,6 @@ num=[95, 91, 88, 85, 81, 78, 75, 71, 65, 55];
 
 grades = gradecalc(num)
 
-% Problem 9 ?
-% Problem 10?
-%Problem 11?
-%Problem 12?
-
 %% Problem 13
 
 M = zeros(250,250);
@@ -74,13 +69,9 @@ colormap(gray)
 imagesc(M)
 truesize
 
-% Problem 14 ?
-
-%% problems 15-17? 
 clear all
 d = data15
 
-%% Problem 18
 
 
 

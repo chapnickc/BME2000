@@ -25,7 +25,7 @@ y2 = -2.*x +7;
 
 % the way we use this new syntax is
 figure(1)
-p = plot(x, y1,... % dont have to do this
+p = plot(x, y1,
          x, y2);
 
 % wanted to change the linestyle of y1
@@ -164,14 +164,12 @@ A*soln
                 % y      % x     % soln
 func = @(var) [var(1) - 3*var(2) - 2;
                var(1) + 2*var(2) - 7];
-% 
+ 
 initial = [0;0];
 
 solns = fsolve(func, initial,...
                optimoptions('fsolve', 'Display', 'off'));
            
-%%
-
 %%
 y_intersect = solns(1)
 x_intersect = solns(2)
@@ -190,7 +188,7 @@ plot(x,y1,...
     x_intersect,y_intersect,'ko')
 
 
-%% --------slightly more complicated example
+%% slightly more complicated example
 % i'll show you how to find when a nonlinear
 % equation interesects a line using fsolve.
 
@@ -224,15 +222,14 @@ plot(x,y,...
 % x.^2 - e^-x = 0.25
 % will write it like
 % x.^2 - e^-x - 0.25
-% 
-%
-%
+ 
+
+
 clear all
 
 % going to use threshold in our fn so we need to 
 % define it as a global variable
-% 
-% 
+ 
 global threshold
 threshold = 0.25;
 
@@ -247,9 +244,6 @@ output = [(var(1).^2 .*exp(-var(1))-threshold);
           (var(2)^2 .*exp(-var(2))-threshold)];
                     %x2         x2
 end
-%% -----
-% 
-%
 
 %%
 beta = [0.5; 3];
@@ -260,8 +254,6 @@ intersect =fsolve(@my_func, beta,...
     optimoptions('fsolve','Display','off'))
     
 % look at graph after both to see if its reasonable 
-%
-
 
 %%
 
@@ -277,5 +269,4 @@ plot(x,y,...
      x, thresh_line,...
      intersect(1), threshold,'ro',...
      intersect(2), threshold,'ro'), grid
-
 
